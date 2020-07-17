@@ -5,7 +5,7 @@ aab
 aaa
 eaxdixae)
 
-puts "----" * 10 + "\n" + "        MY PALIDROME SOLUTION".yellow + "\n" + "----" * 10 
+puts "----" * 10 + "\n" + "      MY PALIDROME INDEX SOLUTION".yellow + "\n" + "----" * 10 
 s.each do |i|
   puts "Entering string = #{i.upcase}".red
   if i == i.reverse
@@ -16,17 +16,15 @@ s.each do |i|
     steps = i.size.even? ? i.size/2 : (i.size/2)-1
     count_deletions = 0
     steps.times do
-      if i[0] != i[-1]
+      unless i[0] == i[-1]
         puts "first and last chars are diferent!"
         i[0] = i[-1] # optional, not necessary make changes
-        puts "before break"
-      else
+        else
         i = i[1...-1]
         puts "count_deletions = #{count_deletions += 1}"
       end
-      puts count_deletions
-      break if count_deletions > 0
     end
+    puts "returns: #{count_deletions}"
   end
   puts "----" * 10 
 end      
