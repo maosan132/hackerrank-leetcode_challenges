@@ -12,7 +12,7 @@ while true
 print a[-1] + a[-2] > n ? break : a << a[-1] + a[-2]
 puts
 end
-puts x = a.inject {|mem, i| mem.even? && i.even? ? mem + i : mem}
+puts x = a.inject {|mem, i| i.even? ? mem + i : mem}
 
 
 # a = [0,1]
