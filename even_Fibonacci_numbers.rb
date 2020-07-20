@@ -8,11 +8,11 @@ puts '-' * 40 + "\n" + '      MY EVEN FIBONACCI SOLUTION'.yellow + "\n" + '-' * 
 # starting from 1, get a new term by adding last two terms until the number requested.
 # a+b=c => c+b = c
 a = [0,1]
-while true
-print a[-1] + a[-2] > n ? break : a << a[-1] + a[-2]
-puts
+boolean = true
+while boolean
+print a[-1] + a[-2] > n ? boolean = false : a << a[-1] + a[-2]
 end
-puts x = a.inject {|mem, i| i.even? ? mem + i : mem}
+puts a.inject {|mem, i| i.even? ? mem + i : mem}
 
 
 # a = [0,1]
