@@ -5,12 +5,12 @@ s = 'aaab'
 puts '-' * 40 + "\n" + '      MY PALIDROME INDEX SOLUTION'.yellow + "\n" + '-' * 40
 
 def is_a_palindrome?(s)
-  s = s.reverse
+  s == s.reverse
 end
-def extremes_diferent?(s)
-  s[0] != s[-1]
+def same_ends?(s)
+  s[0] == s[-1]
 end
-def delete_extremes(s)
+def delete_ends(s)
   s[1...-1]
 end
 if is_a_palindrome?(s)
