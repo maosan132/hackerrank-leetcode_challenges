@@ -2,10 +2,18 @@ require 'colorize'
 
 s = 'aaab'
 
-puts '----' * 10 + "\n" + '      MY PALIDROME INDEX SOLUTION'.yellow + "\n" + '----' * 10
+puts '-' * 40 + "\n" + '      MY PALIDROME INDEX SOLUTION'.yellow + "\n" + '-' * 40
 
-reversed_string = s.reverse
-if s == reversed_string
+def is_a_palindrome?(s)
+  s = s.reverse
+end
+def extremes_diferent?(s)
+  s[0] != s[-1]
+end
+def delete_extremes(s)
+  s[1...-1]
+end
+if is_a_palindrome?(s)
   -1
 else
   size = s.size
@@ -22,7 +30,7 @@ else
   count_deletions
 end
 
-puts '----' * 10
+puts '-' * 40
 
 # s = %w(aaba
 # aab
