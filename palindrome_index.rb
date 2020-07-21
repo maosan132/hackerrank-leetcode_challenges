@@ -4,9 +4,9 @@ s = 'aaab'
 
 puts '----' * 10 + "\n" + '      MY PALIDROME INDEX SOLUTION'.yellow + "\n" + '----' * 10
 
-if s == s.reverse
-  num = -1
-  return num
+reversed_string = s.reverse
+if s == reversed_string
+  -1
 else
   size = s.size
   steps = size.even? ? size / 2 : (size / 2) - 1
