@@ -1,1 +1,1 @@
-# hackerrank_challenges_with_ruby
+# Coding challenges
